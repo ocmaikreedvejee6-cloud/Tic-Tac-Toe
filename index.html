@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Tic Tac Toe</h1>
+
+    <section class="status-bar">
+      <div id="turn">Current: <span id="currentPlayer">X</span></div>
+      <div class="controls">
+        <button id="restart">Restart Round</button>
+        <button id="resetScores" title="Clear accumulated scores">Reset Scores</button>
+      </div>
+    </section>
+
+    <section id="board" class="board" aria-label="Tic Tac Toe board">
+      <!-- 9 cells inserted by JS (for accessible markup we keep them here initially) -->
+      <button class="cell" data-index="0" aria-label="cell 1"></button>
+      <button class="cell" data-index="1" aria-label="cell 2"></button>
+      <button class="cell" data-index="2" aria-label="cell 3"></button>
+      <button class="cell" data-index="3" aria-label="cell 4"></button>
+      <button class="cell" data-index="4" aria-label="cell 5"></button>
+      <button class="cell" data-index="5" aria-label="cell 6"></button>
+      <button class="cell" data-index="6" aria-label="cell 7"></button>
+      <button class="cell" data-index="7" aria-label="cell 8"></button>
+      <button class="cell" data-index="8" aria-label="cell 9"></button>
+    </section>
+
+    <section class="scoreboard">
+      <div class="score">
+        <div class="label">X</div>
+        <div id="scoreX" class="value">0</div>
+      </div>
+      <div class="score">
+        <div class="label">Draws</div>
+        <div id="scoreDraw" class="value">0</div>
+      </div>
+      <div class="score">
+        <div class="label">O</div>
+        <div id="scoreO" class="value">0</div>
+      </div>
+    </section>
+
+    <footer class="hint">Tip: Click any cell to play. Try fullscreen on mobile for best experience.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
